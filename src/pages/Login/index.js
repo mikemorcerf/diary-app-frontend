@@ -24,6 +24,10 @@ export default function Login () {
 
     await api.post('authenticate', data)
       .then((response)=>{
+        if(response.data.error){
+          alert(JSON.stringify(response.data.error));
+          return;
+        }
         localStorage.setItem('AuthorizationToken',`Bearer ${response.data.token}`);
         api.defaults.headers.common['Authorization'] = localStorage.getItem('AuthorizationToken');
         history.push('/profile');
