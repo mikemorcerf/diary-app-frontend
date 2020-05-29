@@ -241,11 +241,6 @@
 }
 
 @media (max-width:900px) {
-  form input:not(.range-slide) {
-    height: 30px;
-    max-width: 55px;
-  }
-
   .profile-logs-container .filter-box .filter-form {
     display: block;
     text-align: center;

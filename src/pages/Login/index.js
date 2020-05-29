@@ -32,8 +32,8 @@ export default function Login () {
         api.defaults.headers.common['Authorization'] = localStorage.getItem('AuthorizationToken');
         history.push('/profile');
       })
-      .catch((err)=>{
-        alert(`Error logging in: ${JSON.stringify(err.response.data.error)}`);
+      .catch(()=>{
+        alert('Error logging in: Please check your credentials');
       });
   }
 
